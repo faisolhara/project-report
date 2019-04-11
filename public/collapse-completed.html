@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="description" content="Admin, Dashboard, Bootstrap" />
+	<link rel="shortcut icon" sizes="196x196" href="http://localhost/dck-project-report/public/assets/images/logo.png">
+	<title>DCK Project Report - Project</title>
+
+  	<link rel="stylesheet" href="http://localhost/dck-project-report/public/libs/bower/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+	<!-- build:css ../assets/css/app.min.css -->
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/libs/bower/animate.css/animate.min.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/libs/bower/fullcalendar/dist/fullcalendar.min.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/assets/css/core.css">
+  <link rel="stylesheet" href="http://localhost/dck-project-report/public/assets/css/app.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/assets/css/style.css">
+	<link rel="stylesheet" href="http://localhost/dck-project-report/public/libs/bower/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+  
+	<script src="http://localhost/dck-project-report/public/libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+	<script>
+		Breakpoints();
+	</script>
+</head>
+	
+<body class="menubar-left menubar-unfold menubar-light theme-primary">
+<!--============= start main area -->
+
+<!-- APP NAVBAR ==========-->
+<nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top primary">
+  
+  <!-- navbar header -->
+  <div class="navbar-header">
+    <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+    </button>
+
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="zmdi zmdi-hc-lg zmdi-more"></span>
+    </button>
+
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="zmdi zmdi-hc-lg zmdi-search"></span>
+    </button>
+
+    <a href="http://localhost/dck-project-report/public" class="navbar-brand">
+      <span class="brand-icon"><i class="fa fa-star-o"></i></span>
+      <span class="brand-name">DCK</span>
+    </a>
+  </div><!-- .navbar-header -->
+  
+  <div class="navbar-container container-fluid">
+    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+      <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+        <li class="hidden-float hidden-menubar-top">
+          <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger">
+            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+          </a>
+        </li>
+        <li>
+          <h5 class="page-title hidden-menubar-top hidden-float">Project</h5>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
+          <ul class="dropdown-menu animated flipInY">
+            <li><a href="http://localhost/dck-project-report/public/logout"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div><!-- navbar-container -->
+</nav>
+<!--========== END app navbar -->
+
+<!-- APP ASIDE ==========-->
+<aside id="menubar" class="menubar light">
+  <div class="app-user">
+    <div class="media">
+      <div class="media-left">
+        <div class="avatar avatar-md avatar-circle">
+                  <a href="javascript:void(0)"><img class="img-responsive" src="http://localhost/dck-project-report/public/images/foto/BAF.jpg" alt="avatar"/></a>
+        </div><!-- .avatar -->
+      </div>
+      <div class="media-body">
+        <div class="foldable">
+          <h5><a href="javascript:void(0)" class="username">Bakhtiar Arifin</a></h5>
+          <ul>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <small>Information Communication Tech</small>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </div><!-- .app-user -->
+
+  <div class="menubar-scroll">
+    <div class="menubar-scroll-inner">
+      <ul class="app-menu">
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+            <span class="menu-text">Transaction</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="http://localhost/dck-project-report/public/transaction/project"><span class="menu-text">Project</span></a></li>
+            <li><a href="http://localhost/dck-project-report/public/transaction/update-progress"><span class="menu-text">Progress</span></a></li>
+            <li><a href="http://localhost/dck-project-report/public/transaction/validation-progress"><span class="menu-text">Validation Progress</span></a></li>
+            <li><a href="http://localhost/dck-project-report/public/transaction/meeting"><span class="menu-text">Meeting</span></a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
+            <span class="menu-text">Report</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="http://localhost/dck-project-report/public/report/project"><span class="menu-text">Last Update Project</span></a></li>
+            <li><a href="http://localhost/dck-project-report/public/report/detail-history-project"><span class="menu-text">Detail History Project</span></a></li>
+            <li><a href="http://localhost/dck-project-report/public/report/detail-history-milestone"><span class="menu-text">Detail History Milestone</span></a></li>
+          </ul>
+        </li>
+
+      </ul><!-- .app-menu -->
+    </div><!-- .menubar-scroll-inner -->
+  </div><!-- .menubar-scroll -->
+</aside>
+<!--========== END app aside -->
+
+<!-- navbar search -->
+<div id="navbar-search" class="navbar-search collapse">
+  <div class="navbar-search-inner">
+    <form action="#">
+      <span class="search-icon"><i class="fa fa-search"></i></span>
+      <input class="search-field" type="search" placeholder="search..."/>
+    </form>
+    <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+      <i class="fa fa-close"></i>
+    </button>
+  </div>
+  <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+</div><!-- .navbar-search -->
+
+<!-- APP MAIN ==========-->
+<main id="app-main" class="app-main">
+  <div class="wrap">
+	<section class="app-content">
+		<div class="row">
+  <div class="col-md-12">
+    <div class="widget">
+        <header class="widget-header">
+            <h4 class="widget-title">Project</h4>
+        </header>
+        <hr class="widget-separator">
+        <div class="widget-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Item Code</label>
+                                    <label class="col-sm-8 control-label">2016.00044.00000</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Project Name</label>
+                                    <label class="col-sm-8 control-label">JASA-DCK / - / - HRK.Pembuatan Software Sistem Informasi Bengkel - TOS.03.15.00002</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Customer</label>
+                                    <label class="col-sm-8 control-label">Bengkel Top Spet</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Project Value</label>
+                                    <label class="col-sm-8 control-label">IDR 12,272,728 </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">PR Number</label>
+                                    <label class="col-sm-8 control-label">
+                                                                            </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">PO Number</label>
+                                    <label class="col-sm-8 control-label"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">SO Number</label>
+                                    <label class="col-sm-8 control-label">15200069</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="m-b-lg nav-tabs-horizontal">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab" aria-expanded="false">Technical</a></li>
+                            <li role="presentation" class=""><a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab" aria-expanded="true">Marketing</a></li>
+                        </ul>
+                        <div class="tab-content p-md">
+                            <div role="tabpanel" class="tab-pane fade active in" id="tab-1">
+                                <form class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">Start</label>
+                                                                                                <label class="col-sm-8 control-label">01-07-2017</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">End</label>
+                                                                                                <label class="col-sm-8 control-label">03-08-2017</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">Progress</label>
+                                                <label class="col-sm-8 control-label">80%</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Description</label>
+                                                <label class="col-sm-10 control-label">development tinggal testing</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Problem</label>
+                                                <label class="col-sm-10 control-label"></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Solution</label>
+                                                <label class="col-sm-10 control-label"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">Completed Milestones</label>
+                                                <div class="col-sm-8">
+                                                    <input id="toggle-completed-milestones" type="checkbox" data-switchery />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 text-right">
+                                            <a href="http://localhost/dck-project-report/public/transaction/project/update-detail/71049/Technical" class="btn btn-sm btn-primary">Add / Remove Milestones Technical</a>
+                                            <a href="http://localhost/dck-project-report/public/transaction/project/add-progress/71049/Technical" class="btn btn-sm btn-primary">Add Progress Technical</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <hr/>
+                                                                                                                                    <div class="panel-group accordion" id="accordion" role="tablist">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading milestone-heading" role="tab" id="heading-1">
+                                                        <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#milestone-179" aria-expanded="false" aria-controls="milestone-179">
+                                                            <h4 class="panel-title">MIlestone 2 (<span class="milestone-persentage">5</span>%)</h4>
+                                                            <i class="fa acc-switch"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div id="milestone-179" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                <label class="col-sm-8 control-label">01-08-2017</label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                <label class="col-sm-8 control-label">31-08-2017</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Progress</label>
+                                                                        <label class="col-sm-8 control-label">5%</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Description</label>
+                                                                        <label class="col-sm-10 control-label">task1 baru template. untuk semua</label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Problem</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Solution</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Completed Task</label>
+                                                                        <div class="col-sm-10">
+                                                                            <input class="toggle-completed-tasks" type="checkbox" data-switchery />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <hr/>
+                                                                                                                                                                                                            <div class="panel-group accordion" id="milestone-179" role="tablist" style="display:none">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading task-heading" role="tab" id="heading-2">
+                                                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#milestone-179" href="#task-473" aria-expanded="false" aria-controls="task-473">
+                                                                                    <h4 class="panel-title">Task 1.1 (<span class="task-persentage">100</span>%)</h4>
+                                                                                    <i class="fa acc-switch"></i>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div id="task-473" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                                                                                <div class="panel-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                                                                <label class="col-sm-8 control-label">01-08-2017</label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                                                                <label class="col-sm-8 control-label">15-08-2017</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">Progress</label>
+                                                                                                <label class="col-sm-8 control-label">10%</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Description</label>
+                                                                                                <label class="col-sm-10 control-label">template</label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Problem</label>
+                                                                                                <label class="col-sm-10 control-label"></label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Solution</label>
+                                                                                                <label class="col-sm-10 control-label"></label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                                                                                                                                                            <div class="panel-group accordion" id="milestone-179" role="tablist">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading task-heading" role="tab" id="heading-2">
+                                                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#milestone-179" href="#task-474" aria-expanded="false" aria-controls="task-474">
+                                                                                    <h4 class="panel-title">Task 1.2 (<span class="task-persentage">0</span>%)</h4>
+                                                                                    <i class="fa acc-switch"></i>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div id="task-474" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                                                                                <div class="panel-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                                                                <label class="col-sm-8 control-label">15-08-2017</label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                                                                <label class="col-sm-8 control-label">31-08-2017</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">Progress</label>
+                                                                                                <label class="col-sm-8 control-label">0%</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Description</label>
+                                                                                                <label class="col-sm-10 control-label"></label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Problem</label>
+                                                                                                <label class="col-sm-10 control-label"></label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Solution</label>
+                                                                                                <label class="col-sm-10 control-label"></label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                                                                    <div class="panel-group accordion" id="accordion" role="tablist" style="display:none">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading milestone-heading" role="tab" id="heading-1">
+                                                        <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#milestone-83" aria-expanded="false" aria-controls="milestone-83">
+                                                            <h4 class="panel-title">Milestone 1 (<span class="milestone-persentage">100</span>%)</h4>
+                                                            <i class="fa acc-switch"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div id="milestone-83" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                <label class="col-sm-8 control-label">01-07-2017</label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                <label class="col-sm-8 control-label">04-08-2017</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Progress</label>
+                                                                        <label class="col-sm-8 control-label">80%</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Description</label>
+                                                                        <label class="col-sm-10 control-label">keselipan task yang lain. support internal</label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Problem</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Solution</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <hr/>
+                                                                                                                                                                                                            <div class="panel-group accordion" id="milestone-83" role="tablist">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading task-heading" role="tab" id="heading-2">
+                                                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#milestone-83" href="#task-237" aria-expanded="false" aria-controls="task-237">
+                                                                                    <h4 class="panel-title">Task 1.1 (<span class="task-persentage">80</span>%)</h4>
+                                                                                    <i class="fa acc-switch"></i>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div id="task-237" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                                                                                <div class="panel-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                                                                <label class="col-sm-8 control-label">01-07-2017</label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                                                                <label class="col-sm-8 control-label">04-08-2017</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-4 control-label">Progress</label>
+                                                                                                <label class="col-sm-8 control-label">80%</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Description</label>
+                                                                                                <label class="col-sm-10 control-label">tinggal testing</label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Problem</label>
+                                                                                                <label class="col-sm-10 control-label">keselipan task yang lain</label>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="col-sm-2 control-label">Solution</label>
+                                                                                                <label class="col-sm-10 control-label"></label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </form>
+                            </div><!-- .tab-pane  -->
+                            <div role="tabpanel" class="tab-pane fade" id="tab-2">
+                                <form class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">Start</label>
+                                                                                                <label class="col-sm-8 control-label"></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">End</label>
+                                                                                                <label class="col-sm-8 control-label"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">Progress</label>
+                                                <label class="col-sm-8 control-label">0%</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Description</label>
+                                                <label class="col-sm-10 control-label"></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Problem</label>
+                                                <label class="col-sm-10 control-label"></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Solution</label>
+                                                <label class="col-sm-10 control-label"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 text-right">
+                                            <a href="http://localhost/dck-project-report/public/transaction/project/update-detail/71049/Marketing" class="btn btn-sm btn-primary">Add / Remove Milestones Marketing</a>
+                                            <a href="http://localhost/dck-project-report/public/transaction/project/add-progress/71049/Marketing" class="btn btn-sm btn-primary">Add Progress Marketing</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <hr/>
+                                                                                                                                    <div class="panel-group accordion" id="accordion" role="tablist">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading milestone-heading" role="tab" id="heading-1">
+                                                        <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#milestone-130" aria-expanded="false" aria-controls="milestone-130">
+                                                            <h4 class="panel-title">BAST (0%)</h4>
+                                                            <i class="fa acc-switch"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div id="milestone-130" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                <label class="col-sm-8 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                <label class="col-sm-8 control-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Progress</label>
+                                                                        <label class="col-sm-8 control-label">0%</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Description</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Problem</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Solution</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <hr/>
+                                                                                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                                                                    <div class="panel-group accordion" id="accordion" role="tablist">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading milestone-heading" role="tab" id="heading-1">
+                                                        <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#milestone-129" aria-expanded="false" aria-controls="milestone-129">
+                                                            <h4 class="panel-title">Bayar (0%)</h4>
+                                                            <i class="fa acc-switch"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div id="milestone-129" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Start</label>
+                                                                                                                                                <label class="col-sm-8 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">End</label>
+                                                                                                                                                <label class="col-sm-8 control-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-4 control-label">Progress</label>
+                                                                        <label class="col-sm-8 control-label">0%</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Description</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Problem</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">Solution</label>
+                                                                        <label class="col-sm-10 control-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <hr/>
+                                                                                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </form>
+                            </div><!-- .tab-pane  -->
+                        </div><!-- .tab-content  -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <hr>
+                <div class="col-sm-12 text-right">
+                    <a href="http://localhost/dck-project-report/public/transaction/project" class="btn btn-sm btn-warning">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+	</section><!-- .app-content -->
+</div><!-- .wrap -->
+  <!-- APP FOOTER -->
+  <div class="wrap p-t-0">
+    <footer class="app-footer">
+      <div class="clearfix">
+        <div class="copyright pull-left">SE DCK &copy; 2017 </div>
+      </div>
+    </footer>
+  </div>
+  <!-- /#app-footer -->
+</main>
+<!--========== END app main -->
+
+	<!-- APP CUSTOMIZER -->
+	<div id="app-customizer" class="app-customizer">
+		<a href="javascript:void(0)" 
+			class="app-customizer-toggle theme-color" 
+			data-toggle="class" 
+			data-class="open"
+			data-active="false"
+			data-target="#app-customizer">
+			<i class="fa fa-gear"></i>
+		</a>
+		<div class="customizer-tabs">
+			<!-- tabs list -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#menubar-customizer" aria-controls="menubar-customizer" role="tab" data-toggle="tab">Menubar</a></li>
+				<li role="presentation"><a href="#navbar-customizer" aria-controls="navbar-customizer" role="tab" data-toggle="tab">Navbar</a></li>
+			</ul><!-- .nav-tabs -->
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane in active fade" id="menubar-customizer">
+					<div class="hidden-menubar-top hidden-float">
+						<div class="m-b-0">
+							<label for="menubar-fold-switch">Fold Menubar</label>
+							<div class="pull-right">
+								<input id="menubar-fold-switch" type="checkbox" data-switchery data-size="small" />
+							</div>
+						</div>
+						<hr class="m-h-md">
+					</div>
+					<div class="radio radio-default m-b-md">
+						<input type="radio" id="menubar-light-theme" name="menubar-theme" data-toggle="menubar-theme" data-theme="light">
+						<label for="menubar-light-theme">Light</label>
+					</div>
+
+					<div class="radio radio-inverse m-b-md">
+						<input type="radio" id="menubar-dark-theme" name="menubar-theme" data-toggle="menubar-theme" data-theme="dark">
+						<label for="menubar-dark-theme">Dark</label>
+					</div>
+				</div><!-- .tab-pane -->
+				<div role="tabpanel" class="tab-pane fade" id="navbar-customizer">
+					<!-- This Section is populated Automatically By javascript -->
+				</div><!-- .tab-pane -->
+			</div>
+		</div><!-- .customizer-taps -->
+		<hr class="m-0">
+		<div class="customizer-reset">
+			<button id="customizer-reset-btn" class="btn btn-block btn-outline btn-primary">Reset</button>
+		</div>
+	</div><!-- #app-customizer -->
+  
+    <!-- build:js ../assets/js/core.min.js -->
+  <script src="http://localhost/dck-project-report/public/libs/bower/jquery/dist/jquery.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/jquery-ui/jquery-ui.min.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/PACE/pace.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js ../assets/js/app.min.js -->
+  <script src="http://localhost/dck-project-report/public/assets/js/library.js"></script>
+  <script src="http://localhost/dck-project-report/public/assets/js/plugins.js"></script>
+  <script src="http://localhost/dck-project-report/public/assets/js/app.js"></script>
+  <!-- endbuild -->
+  <script src="http://localhost/dck-project-report/public/libs/bower/moment/moment.js"></script>
+  <script src="http://localhost/dck-project-report/public/libs/bower/fullcalendar/dist/fullcalendar.min.js"></script>
+  <script src="http://localhost/dck-project-report/public/assets/js/fullcalendar.js"></script>
+  <script type="text/javascript">
+    setTimeout(function(){
+      window.location = 'http://localhost/dck-project-report/public/logout';
+    }, 240 * 60 * 1000);
+  </script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+        $('#toggle-completed-milestones').on('change', function() {
+            var checked = $(this).is(':checked');
+            $('span.milestone-persentage').each(function() {
+                if (parseInt($(this).html()) >= 100) {
+                    if (checked) {
+                        $(this).parent().parent().parent().parent().parent().show();
+                    } else {
+                        $(this).parent().parent().parent().parent().parent().hide();
+                    }
+                }
+            })
+        })
+
+        $('.toggle-completed-tasks').on('change', function() {
+            var checked = $(this).is(':checked');
+            $('span.task-persentage').each(function() {
+                if (parseInt($(this).html()) >= 100) {
+                    if (checked) {
+                        $(this).parent().parent().parent().parent().parent().show();
+                    } else {
+                        $(this).parent().parent().parent().parent().parent().hide();
+                    }
+                }
+            })
+        })
+    })
+  </script>
+  </body>
+</html>

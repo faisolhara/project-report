@@ -1,0 +1,97 @@
+.form-horizontal .control-label {
+  text-align: left;
+}
+.panel-title, .accordion-toggle .acc-switch {
+  font-size: 12px; font-weight: bold; color: #6a6c6f;
+}
+.accordion-toggle {
+  padding: 7px;
+}
+.form-group, .panel-collapse .form-group {
+  margin-bottom: 5px;
+}
+.panel-default > .panel-collapse, .panel-default > .panel-heading {
+  border: 1px solid #ddd;
+}
+.table > thead > tr > th {
+  background-color: #EDF0EB !important;
+}
+.table > thead > tr > th, .table > tbody > tr > td {
+  vertical-align: middle;
+}
+table.table hr {
+  margin: 0px;
+}
+.form-control, .modal-content .form-control {
+  height: 30px;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  padding: 4px;
+}
+.pagination {
+  margin: 10px 0px;
+}
+.nav-tabs-horizontal .nav-tabs > li > a {
+  padding: 10px;
+}
+.p-md {
+  padding: 5px !important;
+}
+.form-horizontal .control-label {
+  padding-top: 5px;
+}
+.panel-group {
+  margin-bottom: 10px;
+}
+hr {
+  margin: 5px 0;
+}
+.m-b-lg {
+  margin-bottom: 5px !important;
+}
+.widget-header, .widget-body, .widget-footer, .panel-body, .panel-footer {
+  padding: 10px;
+}
+.modal-header, .modal-footer {
+  padding: 5px;
+}
+.modal-body {
+  padding: 10px;
+}
+.modal-content .form-group {
+  margin-bottom: 5px;
+}
+.select2-selection .select2-selection__arrow, .select2-selection.select2-selection--single {
+  height: 30px !important;
+}
+.select2-selection.select2-selection--single .select2-selection__rendered {
+  line-height: 30px !important;
+}
+.accordion .milestone-heading {
+  background-color: #188ae2;
+}
+.accordion .task-heading {
+  background-color: #10c469;
+}
+.accordion .milestone-heading a h4, .accordion .milestone-heading a i{
+  color: white;
+}
+.accordion .task-heading a h4, .accordion .task-heading a i {
+  color: white;
+}
+.checkbox label::after{
+  padding-top: 0px !important;
+}
+.alert-success{
+  border-color: #b8ed71;
+}
+.alert {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.alert-dismissable, .alert-dismissible {
+  padding-right: 30px;
+}
